@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #F6704B;
+}
+.card--locationColor{
+    background: #620808;
+    color: #FFE9C1;
+}
+.card--musicColor{
+    background: #A53F3F;
+    color: #F4CE74;
+}
+.card--notesColor{
+    background: #F4CE74;
+    color: #620808;
+}
+.card--booksColor{
+    background: #FFE9C1;
+    color: #A53F3F;
+}
+.card--tendancesColor{
+    background: #D5441C;
+    color: #FFE9C1;
+}
+
+.list{
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+.card{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+
+    position: relative;
+
+    width: 380px;
+    
+    cursor: pointer;
+}
+
+.card__close{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+
+    margin:26px 22px;
+}
+
+.card__text{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+
+    margin-left: 24px;
+}
+
+
+.card__descr{
+
+    font-family: 'Raleway',sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 28px;
+
+    width: 380px;
+    max-height: 0;
+
+    box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.25);
+
+    transition: 0.5s, opacity 0.5s ease-in-out, translate3d 0.3s ease-in-out;
+    opacity: 0;
+    transform: translate3d(0 ,-100px , 0);
+
+}
+.card:hover .card__descr{
+    transform: translate3d(0,0,0);
+    opacity: 1;
+    max-height: 200px;
+    padding: 24px;
+}
